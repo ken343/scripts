@@ -1,14 +1,35 @@
 # Install and Configure Linux how I like it on Ubuntu
 
+#=========================================================================
+
 # Install NeoVim and Configure it & Plugins
-apt install neoVim
+apt install neovim
+
+mkdir -m ~/.config/nvim/init.vim
 mkdir -p ~/.local/share/nvim/site/plugin
 mkdir -p ~/.local/share/nvim/site/ftplugin
+
+# Configure Key Mappings
+cat "inoremap jj <Esc>" >> ~/.config/nvim/init.vim
+cat "set number" >> ~/.config/nvim/init.vim
 
 # Install Fugitive Plugin (Git Wrapper) by tpope
 git clone https://tpope.io/vim/fugitive.git ~/.local/share/nvim/site/plugin
 vim -u NONE -c "helptags fugitive/doc" -c q
 
+
+#=========================================================================
+
+# Standard Tools Apt
+apt install curl \
+	tree \
+	git
+
+# Standard Tools Snap
+snap install code \
+	go
+
+#############################################################################
 : ' This will set up kubernetes and docker
 # s script will set up the node to be a master node.
 
