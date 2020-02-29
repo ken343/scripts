@@ -1,4 +1,16 @@
-s script will set up the node to be a master node.
+# Install and Configure Linux how I like it on Ubuntu
+
+# Install NeoVim and Configure it & Plugins
+apt install neoVim
+mkdir -p ~/.local/share/nvim/site/plugin
+mkdir -p ~/.local/share/nvim/site/ftplugin
+
+# Install Fugitive Plugin (Git Wrapper) by tpope
+git clone https://tpope.io/vim/fugitive.git ~/.local/share/nvim/site/plugin
+vim -u NONE -c "helptags fugitive/doc" -c q
+
+: ' This will set up kubernetes and docker
+# s script will set up the node to be a master node.
 
 echo Setting up Kubernetes Node...
 
@@ -71,3 +83,4 @@ exit
 
 # Check for all nodes once more.
 kubectl get nodes
+'
