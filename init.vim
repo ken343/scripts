@@ -1,7 +1,16 @@
 inoremap jj <Esc>
 set number
 filetype plugin on
+set nofixendofline
 
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 " Specify a directory for plugins
 " - For Neovim: stdpath('data') . '/plugged'
@@ -12,7 +21,10 @@ Plug 'vim-airline/vim-airline'
 
 Plug 'tpope/vim-fugitive'
 
+Plug 'scrooloose/syntastic'
+
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries :Helptags' }
+
 " Make sure you use single quotes
 
 " Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
