@@ -2,7 +2,6 @@ inoremap jj <Esc>
 
 set number
 filetype plugin on
-set nofixendofline
 syntax enable
 highlight Constant ctermfg=Blue
 
@@ -15,6 +14,9 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_go_checkers = ['go', 'gofmt', 'golangci_lint', 'golint', 'gotype', 'govet']
+
+set noeol
+set nofixeol
 
 " Specify a directory for plugins
 " - For Neovim: stdpath('data') . '/plugged'
