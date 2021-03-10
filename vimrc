@@ -10,6 +10,20 @@ endif
 call plug#begin('~/.vim/plugged')
 
 Plug 'vim-airline/vim-airline'
+Plug 'elixir-lang/vim-elixir'
+Plug 'tpope/vim-fugitive'
+Plug 'neoclide/coc.nvim'
 
 " Initialize plugin system
 call plug#end()
+
+" My Settings
+set nu
+inoremap jj <Esc>
+set visualbell
+colorscheme ron
+
+" Conqer of Completion
+hi! CocErrorSign guifg=#d1666a
+hi! CocInfoSign guibg=#353b45
+hi! CocWarningSign guifg=#d1cd66
