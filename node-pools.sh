@@ -3,7 +3,7 @@
 export NODEPOOL_NAME=development-workload
 export CLUSTER_NAME=my-cluster
 export MACHINE_TYPE=n1-standard-1
-export NODE_COUNT=4
+export NODE_COUNT=6
 
 echo $1
 echo $0
